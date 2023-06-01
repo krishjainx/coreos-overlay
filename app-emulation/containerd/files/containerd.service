@@ -3,7 +3,7 @@ Description=Containerd Container Daemon
 Documentation=http://github.com/docker/containerd
 
 [Service]
-Type=simple
+Type=notify
 ExecStart=/usr/bin/containerd --listen unix:///var/run/docker/libcontainerd/docker-containerd.sock --shim /usr/bin/containerd-shim --state-dir /var/run/docker/libcontainerd/containerd --start-timeout 2m
 Restart=always
 
